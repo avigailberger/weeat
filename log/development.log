@@ -19,3 +19,699 @@ Processing by TestController#hello as HTML
 Completed 200 OK in 1226ms (Views: 1224.6ms)
 
 
+  [1m[35m (47.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (23.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4906759790885221815)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRestaurants (20170919083854)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4906759790885221815)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4906759790885221815)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRestaurants (20170919083854)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4906759790885221815)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4906759790885221815)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRestaurants (20170919083854)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "restaurant_name" character varying, "cuisine" character varying, "rating" integer, "address" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170919083854"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-19 08:48:33.892658"], ["updated_at", "2017-09-19 08:48:33.892658"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4906759790885221815)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-09-19 16:02:37 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/aberger/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/aberger/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 20ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2017-09-19 16:05:09 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/say/hello"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.1) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.2) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/test/hello" for 127.0.0.1 at 2017-09-19 16:06:48 +0300
+Processing by TestController#hello as HTML
+  Rendering test/hello.html.erb within layouts/application
+  Rendered test/hello.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 1359ms (Views: 1357.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/test/stylesheet.css" for 127.0.0.1 at 2017-09-19 16:06:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/test/stylesheet.css"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.1) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.2) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/restaurants/hello" for 127.0.0.1 at 2017-09-19 16:07:10 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"hello"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 14ms (ActiveRecord: 5.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=hello):
+  
+app/controllers/restaurants_controller.rb:67:in `set_restaurant'
+Started GET "/restaurants/" for 127.0.0.1 at 2017-09-19 16:07:15 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-19 16:07:15 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:67:in `set_restaurant'
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-19 16:07:33 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (1.0ms)
+  Rendered restaurants/new.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aberger/work/weeat/app/views/restaurants/_form.html.erb:15: syntax error, unexpected ':'
+...ut_buffer.append=( form.label : name );@output_buffer.safe_a...
+...                               ^
+/Users/aberger/work/weeat/app/views/restaurants/_form.html.erb:16: syntax error, unexpected ':'
+...ffer.append=( form.text_field : name, id: :restaurant_ name ...
+...                               ^):
+  
+app/views/restaurants/_form.html.erb:15: syntax error, unexpected ':'
+app/views/restaurants/_form.html.erb:16: syntax error, unexpected ':'
+app/views/restaurants/new.html.erb:3:in `_app_views_restaurants_new_html_erb___200228793857151450_70359826471640'
+Started GET "/restaurants/" for 127.0.0.1 at 2017-09-19 16:07:54 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-19 16:07:54 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:67:in `set_restaurant'
+Started GET "/restaurants/" for 127.0.0.1 at 2017-09-19 16:10:39 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-19 16:10:40 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:67:in `set_restaurant'
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-19 16:10:42 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (17.5ms)
+  Rendered restaurants/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-19 16:20:01 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e79DAKx8xJcKEReol+6YL6z0ldyYqLJOQ30jmUv7Qn1yDLWSmHmLKyfzRWEnmIjcVjVrbZsOj4Y0L4Ekkp/SCA==", "restaurant"=>{"restaurant_name"=>"ציק צאק ציקן", "cuisine"=>"&#97;", "rating"=>"4", "address"=>"אבן גבירול 30, תל אביב יפו"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("restaurant_name", "cuisine", "rating", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["restaurant_name", "ציק צאק ציקן"], ["cuisine", "&#97;"], ["rating", 4], ["address", "אבן גבירול 30, תל אביב יפו"], ["created_at", "2017-09-19 13:20:01.149592"], ["updated_at", "2017-09-19 13:20:01.149592"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/1
+Completed 302 Found in 17ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/restaurants/1" for 127.0.0.1 at 2017-09-19 16:20:01 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (5.6ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 18.4ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-19 16:20:01 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:67:in `set_restaurant'
+Started GET "/restaurants/1" for 127.0.0.1 at 2017-09-19 16:24:35 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-19 16:24:35 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:67:in `set_restaurant'
+Started GET "/restaurants/" for 127.0.0.1 at 2017-09-19 16:28:31 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-19 16:28:31 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:67:in `set_restaurant'
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-19 16:29:29 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:67:in `set_restaurant'
+Started GET "/restaurants/" for 127.0.0.1 at 2017-09-19 17:05:19 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/" for 127.0.0.1 at 2017-09-19 17:05:31 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-19 17:07:03 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (3.5ms)
+  Rendered restaurants/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 59ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-19 17:07:03 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (2.0ms)
+  Rendered restaurants/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-19 17:07:44 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XSSpumhEeEimdzirULzrjVcOr1CaKrySWBgvkhPM12Y8iDkCiC8BVs8oB3aY8e6wvSBCz+DO3iEd0ma7Q46xWw==", "restaurant"=>{"restaurant_name"=>"קרנף", "cuisine"=>"B", "rating"=>"2", "address"=>"שאול המלך 4, תל אביב יפו"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("restaurant_name", "cuisine", "rating", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["restaurant_name", "קרנף"], ["cuisine", "B"], ["rating", 2], ["address", "שאול המלך 4, תל אביב יפו"], ["created_at", "2017-09-19 14:07:44.180993"], ["updated_at", "2017-09-19 14:07:44.180993"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/2
+Completed 302 Found in 10ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/restaurants/2" for 127.0.0.1 at 2017-09-19 17:07:44 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-19 17:07:44 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:67:in `set_restaurant'
+Started GET "/restaurants/" for 127.0.0.1 at 2017-09-19 17:07:47 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/1" for 127.0.0.1 at 2017-09-19 17:17:02 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-19 17:17:02 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:67:in `set_restaurant'
+Started GET "/restaurants/" for 127.0.0.1 at 2017-09-19 17:17:39 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/" for 127.0.0.1 at 2017-09-19 17:24:29 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurants/index.html.erb within layouts/application
+  Rendered restaurants/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 36ms (Views: 17.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/restaurants/" for 127.0.0.1 at 2017-09-19 17:25:42 +0300
+Processing by RestaurantsController#index as HTML
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurants/index.html.erb within layouts/application
+  Rendered restaurants/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants.json" for 127.0.0.1 at 2017-09-19 17:33:38 +0300
+Processing by RestaurantsController#index as JSON
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendering restaurants/index.json.jbuilder
+  Rendered restaurants/_restaurant.json.jbuilder (0.6ms)
+  Rendered restaurants/_restaurant.json.jbuilder (0.2ms)
+  Rendered restaurants/index.json.jbuilder (7.7ms)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants.json" for 127.0.0.1 at 2017-09-19 17:34:45 +0300
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/_restaurant.json.jbuilder (0.6ms)
+  Rendered restaurants/_restaurant.json.jbuilder (0.3ms)
+  Rendered restaurants/index.json.jbuilder (13.7ms)
+Completed 200 OK in 30ms (Views: 14.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-09-19 17:34:49 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants.json" for 127.0.0.1 at 2017-09-19 17:51:47 +0300
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/_restaurant.json.jbuilder (0.7ms)
+  Rendered restaurants/_restaurant.json.jbuilder (0.2ms)
+  Rendered restaurants/index.json.jbuilder (14.1ms)
+Completed 200 OK in 22ms (Views: 14.0ms | ActiveRecord: 4.3ms)
+
+
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4906759790885221815)[0m
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIsTenBisToRestaurants (20170919153131)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.9ms)[0m  [1m[35mALTER TABLE "restaurants" ADD "is_ten_bis" bool[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170919153131"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReviews (20170924061118)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "user_name" character varying, "remark" character varying, "rating" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170924061118"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4906759790885221815)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/restaurants.json" for 127.0.0.1 at 2017-09-24 09:28:16 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as JSON
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :dependant. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :table_name, :before_add, :after_add, :before_remove, :after_remove, :extend, :primary_key, :dependent, :as, :through, :source, :source_type, :inverse_of, :counter_cache, :join_table, :foreign_type, :index_errors):
+  
+app/models/restaurant.rb:2:in `<class:Restaurant>'
+app/models/restaurant.rb:1:in `<top (required)>'
+app/controllers/restaurants_controller.rb:7:in `index'
+Started GET "/restaurants.json" for 127.0.0.1 at 2017-09-24 09:29:01 +0300
+Processing by RestaurantsController#index as JSON
+  Rendering restaurants/index.json.jbuilder
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/_restaurant.json.jbuilder (1.5ms)
+  Rendered restaurants/_restaurant.json.jbuilder (0.2ms)
+  Rendered restaurants/index.json.jbuilder (20.1ms)
+Completed 200 OK in 40ms (Views: 19.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/restaurants/1.json" for 127.0.0.1 at 2017-09-24 09:29:29 +0300
+Processing by RestaurantsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (6.6ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering restaurants/show.json.jbuilder
+  Rendered restaurants/_restaurant.json.jbuilder (0.5ms)
+  Rendered restaurants/show.json.jbuilder (1.3ms)
+Completed 200 OK in 15ms (Views: 4.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-09-24 09:29:59 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/1" for 127.0.0.1 at 2017-09-24 09:30:43 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-24 09:30:43 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:67:in `set_restaurant'
+Started GET "/restaurants" for 127.0.0.1 at 2017-09-24 09:31:15 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2017-09-24 09:31:23 +0300
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  Rendered reviews/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 33ms (Views: 21.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2017-09-24 09:31:27 +0300
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (11.2ms)
+  Rendered reviews/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 48ms (Views: 34.9ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-24 09:31:43 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rvwTpHAXrYkrNWy7x6FaMHyNYwqo7qUoXU/D0STAioYHbIsgop9woBlc6iS/uypUlZndPpMUPfml+vdPLdKGJg==", "review"=>{"user_name"=>"Avigail", "remark"=>"I was hungry at the end", "rating"=>"3"}, "commit"=>"Create Review"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (2.7ms)
+  Rendered reviews/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 38ms (Views: 23.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2017-09-24 09:31:50 +0300
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  Rendered reviews/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-09-24 10:02:40 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 956ms (Views: 939.8ms | ActiveRecord: 5.0ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4906759790885221815)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReviews (20170924061118)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.2ms)[0m  [1m[35mDROP TABLE "reviews"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20170924061118"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4906759790885221815)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4906759790885221815)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateReviews (20170924070851)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "user_name" character varying, "remark" character varying, "rating" integer, "restaurant_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_8173017a90"
+FOREIGN KEY ("restaurant_id")
+  REFERENCES "restaurants" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_reviews_on_restaurant_id" ON "reviews"  ("restaurant_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170924070851"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4906759790885221815)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/reviews" for 127.0.0.1 at 2017-09-24 10:27:37 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  Rendered reviews/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 24ms (Views: 16.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2017-09-24 10:27:44 +0300
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (13.7ms)
+  Rendered reviews/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 61ms (Views: 45.1ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-24 10:29:01 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9Ex6pWQBEs1aXVxmwdR2yHUFdWMrkyKIeaVqrba2r5Rd3OIhtonP5Gg02vm5zgasnBHLVxBpulmBEF4zv6SjNA==", "review"=>{"user_name"=>"Avigail", "remark"=>"I was hungry at the end", "rating"=>"2", "restaurant_id"=>"1"}, "commit"=>"Create Review"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (6.9ms)[0m  [1m[32mINSERT INTO "reviews" ("user_name", "remark", "rating", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "Avigail"], ["remark", "I was hungry at the end"], ["rating", 2], ["restaurant_id", 1], ["created_at", "2017-09-24 07:29:01.789133"], ["updated_at", "2017-09-24 07:29:01.789133"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/reviews/1
+Completed 302 Found in 38ms (ActiveRecord: 16.7ms)
+
+
+Started GET "/reviews/1" for 127.0.0.1 at 2017-09-24 10:29:01 +0300
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2017-09-24 10:30:27 +0300
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2017-09-24 10:31:54 +0300
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2017-09-24 10:31:59 +0300
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (2.3ms)
+  Rendered reviews/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-24 10:32:14 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dqZj2XH2zKu6/kB737ArnpAuswyGtfu02/TmsGN7KczfNvtdo34RgoiXxuSnqlv6eToNOL1PY2UjQdIuamklbA==", "review"=>{"user_name"=>"Moshe", "remark"=>"", "rating"=>"3", "restaurant_id"=>"2"}, "commit"=>"Create Review"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("user_name", "remark", "rating", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "Moshe"], ["remark", ""], ["rating", 3], ["restaurant_id", 2], ["created_at", "2017-09-24 07:32:14.154233"], ["updated_at", "2017-09-24 07:32:14.154233"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/reviews/2
+Completed 302 Found in 11ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/reviews/2" for 127.0.0.1 at 2017-09-24 10:32:14 +0300
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/reviews/" for 127.0.0.1 at 2017-09-24 10:32:18 +0300
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/reviews/" for 127.0.0.1 at 2017-09-24 10:33:00 +0300
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.0ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.4ms)
+
+
