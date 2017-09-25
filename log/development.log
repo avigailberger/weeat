@@ -1976,3 +1976,1367 @@ Unpermitted parameter: :is_ten_bis
 Completed 200 OK in 88ms (Views: 73.1ms | ActiveRecord: 0.5ms)
 
 
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-24 21:32:43 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IynlgxvGsRRMtRVYTgjnI34J85MRZJkoHW3QWldzU09ChXU7+63ICiXqKoWGReIelCceDGuA+5tYp5lzBzE1cg==", "restaurant"=>{"restaurant_name"=>"שניצל קומפני", "cuisine"=>"K", "is_ten_bis"=>"true", "address"=>"אבן גבירול 30, תל אביב יפו"}, "commit"=>"Create Restaurant"}
+Unpermitted parameter: :is_ten_bis
+Unpermitted parameter: :is_ten_bis
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (16.7ms)
+  Rendered restaurants/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 194140ms (Views: 97.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-09-24 21:43:09 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 81ms (Views: 69.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-24 21:43:11 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (174.7ms)
+  Rendered restaurants/new.html.erb within layouts/application (178.2ms)
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `checkbox' for #<ActionView::Helpers::FormBuilder:0x007fcda375e0e0>
+Did you mean?  check_box):
+    23: 
+    24:     <div class="field">
+    25:       <%= form.label :is_ten_bis %>
+    26:       <%= form.checkbox :is_ten_bis, id: :restaurant_is_ten_bis %>
+    27:     </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/restaurants/_form.html.erb:26:in `block in _app_views_restaurants__form_html_erb__1565022814191340522_70260657030100'
+app/views/restaurants/_form.html.erb:1:in `_app_views_restaurants__form_html_erb__1565022814191340522_70260657030100'
+app/views/restaurants/new.html.erb:3:in `_app_views_restaurants_new_html_erb__2678055021378197636_70260657147520'
+Started GET "/restaurants" for 127.0.0.1 at 2017-09-24 21:45:29 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 66ms (Views: 61.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-24 21:45:46 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (14.1ms)
+  Rendered restaurants/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 83ms (Views: 78.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-24 21:48:59 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (15.9ms)
+  Rendered restaurants/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 80ms (Views: 75.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-24 21:49:30 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (14.0ms)
+  Rendered restaurants/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 75ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-24 21:49:42 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (2.1ms)
+  Rendered restaurants/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aberger/weeat/app/views/restaurants/_form.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+...d=( form.label :is_ten_bis form.check_box :is_ten_bis, id: :...
+...                               ^):
+  
+app/views/restaurants/_form.html.erb:25: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/restaurants/new.html.erb:3:in `_app_views_restaurants_new_html_erb__2678055021378197636_70260661654920'
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-24 21:50:11 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (12.9ms)
+  Rendered restaurants/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 73ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-24 21:54:44 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (11.8ms)
+  Rendered restaurants/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 88ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-24 21:56:50 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (1.9ms)
+  Rendered restaurants/new.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/aberger/weeat/app/views/restaurants/_form.html.erb:26: syntax error, unexpected ')', expecting =>
+...rant_is_ten_bis, "Is Ten Bis" );@output_buffer.safe_append='
+...                               ^
+/Users/aberger/weeat/app/views/restaurants/_form.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/aberger/weeat/app/views/restaurants/_form.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/aberger/weeat/app/views/restaurants/_form.html.erb:41: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/restaurants/_form.html.erb:26: syntax error, unexpected ')', expecting =>
+app/views/restaurants/_form.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+app/views/restaurants/_form.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/restaurants/_form.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+app/views/restaurants/new.html.erb:3:in `_app_views_restaurants_new_html_erb__2678055021378197636_70260627339760'
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-24 22:00:50 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (12.8ms)
+  Rendered restaurants/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 81ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-24 22:15:22 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (13.8ms)
+  Rendered restaurants/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 78ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-24 22:15:52 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uGqH2QPiKMaQdhmt/MkbSElcUCqK9u/2wHHgQ5LqAU7Zxhdh44lR2PkpJnA0hB51o3K9tfASjUWFu6lqwqhncw==", "restaurant"=>{"restaurant_name"=>"שניצל קומפני", "cuisine"=>"K", "is_ten_bis"=>"1", "address"=>"אבן גבירול 30, תל אביב יפו"}, "commit"=>"Create Restaurant"}
+Unpermitted parameter: :is_ten_bis
+Unpermitted parameter: :is_ten_bis
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (17.8ms)
+  Rendered restaurants/new.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 27098ms (Views: 74.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-24 22:17:03 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jhomrbtD/u44Ff5P+X+fqAB/8IuDo/gW/gyqexHqm+jvtrYVWyiH8FFKwZIxMpqV6lEdFPlHmqW7xuNSQaj91Q==", "restaurant"=>{"restaurant_name"=>"שניצל קומפני", "cuisine"=>"K", "is_ten_bis"=>"1", "address"=>"אבן גבירול 30, תל אביב יפו"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("restaurant_name", "cuisine", "rating", "address", "created_at", "updated_at", "is_ten_bis") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["restaurant_name", "שניצל קומפני"], ["cuisine", "K"], ["rating", 0], ["address", "אבן גבירול 30, תל אביב יפו"], ["created_at", "2017-09-24 19:17:14.402222"], ["updated_at", "2017-09-24 19:17:14.402222"], ["is_ten_bis", "t"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/7
+Completed 302 Found in 10722ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/restaurants/7" for 127.0.0.1 at 2017-09-24 22:17:14 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 70ms (Views: 60.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-24 22:17:14 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 239356ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:13 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 2870ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 1237ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:18 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 827ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:18 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 683ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:19 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 775ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:20 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 964ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:21 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 852ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:22 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 740ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:22 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 986ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:23 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 1011ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:24 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 944ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:25 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 2507ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:28 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 1526ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:29 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 661ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:30 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 616ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:31 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 1009ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:32 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 1089ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:33 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 3453ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:36 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:21:36 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/" for 127.0.0.1 at 2017-09-24 22:28:42 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 64ms (Views: 59.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-24 22:28:47 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (12.9ms)
+  Rendered restaurants/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 75ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-24 22:28:51 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TGG0lU0BWq55Yn90JPK+ucpJh1UcjUs8tQto4okgezBF0kIHeQQVElSALb2UhK5KMIh55B8rdvTCWcpfUETrRQ==", "restaurant"=>{"restaurant_name"=>"", "cuisine"=>"", "is_ten_bis"=>"0", "address"=>""}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (19.9ms)
+  Rendered restaurants/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 4141ms (Views: 73.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-24 22:29:09 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5AFTZCoADH9o2hCx9dt4q8rfu/InPvMv1fZ+7rHOwtOFrcPcymt1YQGFL2w9ln2WIPFWbV3akZyQPDfH4Yyk7g==", "restaurant"=>{"restaurant_name"=>"בליקר", "cuisine"=>"", "is_ten_bis"=>"0", "address"=>""}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (16.5ms)
+  Rendered restaurants/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 3339ms (Views: 70.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-24 22:29:46 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D9mPdcLvDaQDL8oMnhdniCl/Mj4U9Ce/pjqXwI/m6sludR/NIoR0umpw9dFWWmK1w1HfoW4QRQzj8N7p36SM9A==", "restaurant"=>{"restaurant_name"=>"בליקר", "cuisine"=>"B", "is_ten_bis"=>"0", "address"=>"אינשטיין 5, רחובות"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (13.0ms)
+  Rendered restaurants/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 7016ms (Views: 70.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-24 22:37:13 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d4Mhgwpz4bK71TuKTOVAW6wokbSAspK9Gv0Nc36J2GcWL7E76hiYrNKKBFeEqEVmRgZ8K/pW8A5fN0RaLsu+Wg==", "restaurant"=>{"restaurant_name"=>"בליקר", "cuisine"=>"B", "is_ten_bis"=>"0", "address"=>"אינשטיין 5, רחובות"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("restaurant_name", "cuisine", "rating", "address", "created_at", "updated_at", "is_ten_bis") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["restaurant_name", "בליקר"], ["cuisine", "B"], ["rating", 0], ["address", "אינשטיין 5, רחובות"], ["created_at", "2017-09-24 19:37:16.074980"], ["updated_at", "2017-09-24 19:37:16.074980"], ["is_ten_bis", "f"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/8
+Completed 302 Found in 2717ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/restaurants/8" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 64ms (Views: 56.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/stylesheet" for 127.0.0.1 at 2017-09-24 22:37:16 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/restaurants/stylesheet
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2017-09-25 08:44:44 +0300
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (22.5ms)
+  Rendered reviews/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 341ms (Views: 130.7ms | ActiveRecord: 81.4ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 08:45:05 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cD6Opak7GOHSUvYn3MQVXE0lRgbqUjs5nUNaVKJj3VYRkh4dSVBh/7sNyfoUiRBhpwurmZC2WYrYiRN98iG7aw==", "review"=>{"user_name"=>"Moshe", "remark"=>"testing", "rating"=>"", "restaurant_id"=>""}, "commit"=>"Create Review"}
+  [1m[36mRestaurant Load (7.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Completed 500 Internal Server Error in 34335ms (ActiveRecord: 7.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=):
+  
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 08:47:20 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cD6Opak7GOHSUvYn3MQVXE0lRgbqUjs5nUNaVKJj3VYRkh4dSVBh/7sNyfoUiRBhpwurmZC2WYrYiRN98iG7aw==", "review"=>{"user_name"=>"Moshe", "remark"=>"testing", "rating"=>"", "restaurant_id"=>""}, "commit"=>"Create Review"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (17.5ms)
+  Rendered reviews/new.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 12415ms (Views: 71.8ms | ActiveRecord: 22.6ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 08:47:45 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BmEdySx9Qe1fKjGpnDnHelU9xqknYDrBTSbTKtiiGLxnzY1xzBY48zZ1DnRUdMJHvxMrNl2EWHII7JoDiOB+gQ==", "review"=>{"user_name"=>"Moshe", "remark"=>"testing", "rating"=>"4", "restaurant_id"=>"8"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (13.0ms)
+  Rendered reviews/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 124ms (Views: 69.7ms | ActiveRecord: 10.3ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 08:47:52 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UX46pC4JYwF7BQgfZMxEFpVXAwgEjs0EqwVlRiu7WR8w0qoczmIaHxJaN8KsgUErf3nul35qr7fuzyxve/k/Ig==", "review"=>{"user_name"=>"Moshe", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"8"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (10.8ms)[0m  [1m[32mINSERT INTO "reviews" ("user_name", "remark", "rating", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "Moshe"], ["remark", "testing"], ["rating", 3], ["restaurant_id", 8], ["created_at", "2017-09-25 05:47:52.214324"], ["updated_at", "2017-09-25 05:47:52.214324"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (7.7ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.5ms)[0m  [1m[33mUPDATE "restaurants" SET "rating" = $1, "updated_at" = $2 WHERE "restaurants"."id" = $3[0m  [["rating", 3], ["updated_at", "2017-09-25 05:48:21.784331"], ["id", 8]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/reviews/15
+Completed 302 Found in 29599ms (ActiveRecord: 27.5ms)
+
+
+Started GET "/reviews/15" for 127.0.0.1 at 2017-09-25 08:48:21 +0300
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 63ms (Views: 54.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2017-09-25 08:48:30 +0300
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (11.5ms)
+  Rendered reviews/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 66ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 08:48:43 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ePH6AFwDZz3j9flTESmNILXPP20XdIPx9hsTT+vyKuET1dQ4Rt0gp7Q6DiECaMJaPnRYs65sLyCEiVkb+2ulg==", "review"=>{"user_name"=>"Moshe", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (18.2ms)
+  Rendered reviews/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 103ms (Views: 84.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 08:49:36 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k9Gmpu/MTXiJhCbFn4nfR4x5Olpp/aqnvodjjuAskfjyfTYeD6c0ZuDbGRhXxNp6ZlfXxRMZyBT7TSqnsG73xQ==", "review"=>{"user_name"=>"Moshe", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (15.1ms)
+  Rendered reviews/new.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 86ms (Views: 70.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2017-09-25 08:49:46 +0300
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (13.9ms)
+  Rendered reviews/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 72ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 08:49:57 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3qjEP71KlCHvbUjbO47TOI4rY0BppzbFU8taRifJVfG/BFSHXSHtP4Yydwbzw9YFZAWO3xNDVHYWARNvd4szzA==", "review"=>{"user_name"=>"Moshe", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (16.5ms)
+  Rendered reviews/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 84ms (Views: 68.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 08:50:36 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C3AftX/Hozv5EeUA/3Gi8x4T+OtAT3nneLTBgeP/Xwpq3I8Nn6zaJZBO2t03PKfO9D0VdDqrG1Q9foios705Nw==", "review"=>{"user_name"=>"Moshe", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (16.8ms)
+  Rendered reviews/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 19093ms (Views: 77.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 08:51:52 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5j0lKOe8DclKL1FVDtJW1EBdJA++127k0uOgGsqiAOiHkbWQB9d01yNwbojGn1PpqnPJkMQzDFeXKekzmuBm1Q==", "review"=>{"user_name"=>"Moshe", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"8"}, "commit"=>"Create Review"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "reviews" ("user_name", "remark", "rating", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "Moshe"], ["remark", "testing"], ["rating", 3], ["restaurant_id", 8], ["created_at", "2017-09-25 05:52:00.842223"], ["updated_at", "2017-09-25 05:52:00.842223"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+Attempt to access invalid restaurant
+Completed 500 Internal Server Error in 244262ms (ActiveRecord: 7.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=20):
+  
+app/controllers/reviews_controller.rb:31:in `block in create'
+app/controllers/reviews_controller.rb:29:in `create'
+Started GET "/reviews/new" for 127.0.0.1 at 2017-09-25 09:05:39 +0300
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (11.5ms)
+  Rendered reviews/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 97ms (Views: 75.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:05:52 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"knK5nIz1QOuCgmtYBIEUtXGEjziBqcf41VQaDRK3Vxfz3ikkbJ459evdVIXMzBGIm6pip/tNpUuQnlMkQvUxKg==", "review"=>{"user_name"=>"Moshe", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"3"}, "commit"=>"Create Review"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (11.3ms)
+  Rendered reviews/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 109ms (Views: 74.8ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:05:58 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7ZUDAZaXCrFwomgORkrzHFW4HVIKhgNHCOPfHG/En0uMOZO5dvxzrxn9V9OOB/Yhv5bwzXBiYfRNKZY1P4b5dg==", "review"=>{"user_name"=>"Moshe", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"8"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "reviews" ("user_name", "remark", "rating", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "Moshe"], ["remark", "testing"], ["rating", 3], ["restaurant_id", 8], ["created_at", "2017-09-25 06:05:58.716000"], ["updated_at", "2017-09-25 06:05:58.716000"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 124091ms (ActiveRecord: 2.6ms)
+
+
+  
+NoMethodError (undefined method `update_rating' for nil:NilClass):
+  
+app/controllers/reviews_controller.rb:35:in `block in create'
+app/controllers/reviews_controller.rb:29:in `create'
+Started GET "/reviews/new" for 127.0.0.1 at 2017-09-25 09:10:15 +0300
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (16.1ms)
+  Rendered reviews/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 108ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:10:33 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M7c0hMgH0/Es4q8FH9q7AzK9QCxrVeYjjmj6F67LB0VSG6Q8KGyq70W9kNjXl74+2JOtsxGxhJDLorM+/olheA==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"8"}, "commit"=>"Create Review"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "reviews" ("user_name", "remark", "rating", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "Avigail"], ["remark", "testing"], ["rating", 3], ["restaurant_id", 8], ["created_at", "2017-09-25 06:10:33.727220"], ["updated_at", "2017-09-25 06:10:33.727220"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 242167ms (ActiveRecord: 8.4ms)
+
+
+  
+NoMethodError (undefined method `update_rating' for nil:NilClass):
+  
+app/controllers/reviews_controller.rb:34:in `block in create'
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:14:46 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M7c0hMgH0/Es4q8FH9q7AzK9QCxrVeYjjmj6F67LB0VSG6Q8KGyq70W9kNjXl74+2JOtsxGxhJDLorM+/olheA==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (18.9ms)
+  Rendered reviews/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 105648ms (Views: 89.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:18:32 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U51DMTqtF9rUBVSThsLkhegvyXSrFNUck1CQZDBZ0gAyMdOJ2sZuxL1aa05Oj+G4AgEk69Hwt6/WmtlNYBu0PQ==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (15.8ms)
+  Rendered reviews/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 2685ms (Views: 88.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2017-09-25 09:30:19 +0300
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (10.8ms)
+  Rendered reviews/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 101ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:30:30 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M0Ba379PTj6UEHq7l0LhIGy3YxL2PPs3OA9/RjfHsnhS7MpnXyQ3IP1PRWZfD+QdhpmOjYzYmYR9xTZvZ4XURQ==", "review"=>{"user_name"=>"Avigail", "remark"=>"1111", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Completed 500 Internal Server Error in 146544ms (ActiveRecord: 9.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Restaurant must exist):
+  
+app/controllers/reviews_controller.rb:32:in `block in create'
+app/controllers/reviews_controller.rb:30:in `create'
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:34:03 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M0Ba379PTj6UEHq7l0LhIGy3YxL2PPs3OA9/RjfHsnhS7MpnXyQ3IP1PRWZfD+QdhpmOjYzYmYR9xTZvZ4XURQ==", "review"=>{"user_name"=>"Avigail", "remark"=>"1111", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Completed 500 Internal Server Error in 74049ms (ActiveRecord: 8.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Restaurant must exist):
+  
+app/controllers/reviews_controller.rb:31:in `block in create'
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:37:30 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M0Ba379PTj6UEHq7l0LhIGy3YxL2PPs3OA9/RjfHsnhS7MpnXyQ3IP1PRWZfD+QdhpmOjYzYmYR9xTZvZ4XURQ==", "review"=>{"user_name"=>"Avigail", "remark"=>"1111", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/reviews?notice=Invalid+restaurant
+Completed 406 Not Acceptable in 5297ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:40:09 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M0Ba379PTj6UEHq7l0LhIGy3YxL2PPs3OA9/RjfHsnhS7MpnXyQ3IP1PRWZfD+QdhpmOjYzYmYR9xTZvZ4XURQ==", "review"=>{"user_name"=>"Avigail", "remark"=>"1111", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/reviews?notice=Invalid+restaurant
+Completed 406 Not Acceptable in 57551ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/reviews_controller.rb:29:in `create'
+Started GET "/reviews/new" for 127.0.0.1 at 2017-09-25 09:41:40 +0300
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (9.8ms)
+  Rendered reviews/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 113ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:41:50 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"An+BACS2gwl5kACVEGaQ/q7fDPRhC6GDn4Zowh0MgWdj0xG4xN36FxDPP0jYK5XDRPHhaxvvwzDaTCHrTU7nWg==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/reviews?notice=Invalid+restaurant
+Completed 406 Not Acceptable in 11010ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:42:49 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"An+BACS2gwl5kACVEGaQ/q7fDPRhC6GDn4Zowh0MgWdj0xG4xN36FxDPP0jYK5XDRPHhaxvvwzDaTCHrTU7nWg==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/reviews?notice=Invalid+restaurant
+Completed 406 Not Acceptable in 3544ms (ActiveRecord: 7.6ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:43:58 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"An+BACS2gwl5kACVEGaQ/q7fDPRhC6GDn4Zowh0MgWdj0xG4xN36FxDPP0jYK5XDRPHhaxvvwzDaTCHrTU7nWg==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/reviews?notice=Invalid+restaurant
+Completed 406 Not Acceptable in 4840ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:44:33 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"An+BACS2gwl5kACVEGaQ/q7fDPRhC6GDn4Zowh0MgWdj0xG4xN36FxDPP0jYK5XDRPHhaxvvwzDaTCHrTU7nWg==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/reviews?notice=Invalid+restaurant
+Completed 406 Not Acceptable in 4603ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:48:22 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"An+BACS2gwl5kACVEGaQ/q7fDPRhC6GDn4Zowh0MgWdj0xG4xN36FxDPP0jYK5XDRPHhaxvvwzDaTCHrTU7nWg==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/reviews?notice=Invalid+restaurant
+Completed 302 Found in 4486ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/reviews?notice=Invalid+restaurant" for 127.0.0.1 at 2017-09-25 09:48:27 +0300
+Processing by ReviewsController#index as HTML
+  Parameters: {"notice"=>"Invalid restaurant"}
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (114.5ms)
+Completed 200 OK in 200ms (Views: 186.3ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:50:26 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"An+BACS2gwl5kACVEGaQ/q7fDPRhC6GDn4Zowh0MgWdj0xG4xN36FxDPP0jYK5XDRPHhaxvvwzDaTCHrTU7nWg==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/reviews?notice=Invalid+restaurant
+Completed 406 Not Acceptable in 104598ms (ActiveRecord: 7.8ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:52:25 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"An+BACS2gwl5kACVEGaQ/q7fDPRhC6GDn4Zowh0MgWdj0xG4xN36FxDPP0jYK5XDRPHhaxvvwzDaTCHrTU7nWg==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/reviews?notice=Invalid+restaurant
+Completed 406 Not Acceptable in 76053ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:53:44 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"An+BACS2gwl5kACVEGaQ/q7fDPRhC6GDn4Zowh0MgWdj0xG4xN36FxDPP0jYK5XDRPHhaxvvwzDaTCHrTU7nWg==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/reviews?notice=Invalid+restaurant
+Completed 406 Not Acceptable in 197594ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/reviews_controller.rb:29:in `create'
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 09:58:50 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"An+BACS2gwl5kACVEGaQ/q7fDPRhC6GDn4Zowh0MgWdj0xG4xN36FxDPP0jYK5XDRPHhaxvvwzDaTCHrTU7nWg==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/reviews?notice=Invalid+restaurant
+Completed 302 Found in 30626ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/reviews?notice=Invalid+restaurant" for 127.0.0.1 at 2017-09-25 09:59:21 +0300
+Processing by ReviewsController#index as HTML
+  Parameters: {"notice"=>"Invalid restaurant"}
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (120.1ms)
+Completed 200 OK in 216ms (Views: 208.2ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 10:00:39 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"An+BACS2gwl5kACVEGaQ/q7fDPRhC6GDn4Zowh0MgWdj0xG4xN36FxDPP0jYK5XDRPHhaxvvwzDaTCHrTU7nWg==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"8"}, "commit"=>"Create Review"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "reviews" ("user_name", "remark", "rating", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "Avigail"], ["remark", "testing"], ["rating", 3], ["restaurant_id", 8], ["created_at", "2017-09-25 07:09:22.740769"], ["updated_at", "2017-09-25 07:09:22.740769"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 8]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/reviews/19
+Completed 302 Found in 562451ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/reviews/19" for 127.0.0.1 at 2017-09-25 10:10:01 +0300
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 106ms (Views: 95.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2017-09-25 10:12:17 +0300
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (106.4ms)
+Completed 200 OK in 195ms (Views: 188.5ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/reviews/19" for 127.0.0.1 at 2017-09-25 10:12:24 +0300
+Processing by ReviewsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uyOiPkYGZnmuaZVnZF0/dzLLhyi+4qLmOHTQzF5ZbUHajzKGpm0fZ8c2qrqsEDpK2OVqt8QGwFV9vpnlDhsLfA==", "id"=>"19"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 19]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/reviews
+Completed 302 Found in 19ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2017-09-25 10:12:24 +0300
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (99.8ms)
+Completed 200 OK in 193ms (Views: 187.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2017-09-25 10:16:04 +0300
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (11.8ms)
+  Rendered reviews/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 115ms (Views: 89.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 10:16:15 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+MPx+rANL6uQ1RUuMxSVmBi1V+dnshn/M/g8tPDoOxCT59/CqtNoMcca4lwgVdrikw4wOd6qtS5Banbg4HG0Q==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (15.6ms)
+  Rendered reviews/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 4613ms (Views: 94.3ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 10:16:56 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CFOjO75Ya8+vUiygOSvcFssLkirkuQuB/osKz2bodhVp/zODXjMS0cYNE33xZtkrISV/tZ5daTK7QUPmNqoQKA==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (15.2ms)
+  Rendered reviews/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 11986ms (Views: 88.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 10:18:22 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IN0r+sgmnqy1XaXHK3eQgUxbcAY746+975ey2M6LowhBcbtCKE3nstwCmhrjOpW8pnWdmUEHzQ6qXfvxnsnFNQ==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (12.1ms)
+  Rendered reviews/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 3514ms (Views: 81.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 10:18:42 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x2tAfVf9WSOcj0+5wrS7evlQcoXek9GU0+x2eSBvjPWmx9DFt5YgPfXQcGQK+b5HE36fGqR3syeWJj9QcC3qyA==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (15.5ms)
+  Rendered reviews/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 444621ms (Views: 85.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 10:26:14 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iZDZ9Hg/1MElkmq5Q6JAce8J501/rh7IU3Ad0Sj6KxvoPElMmFSt30zNVWSL70VMBScK0gVKfHsWulT4eLhNJg==", "review"=>{"user_name"=>"Avigail", "remark"=>"testing", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Attempt to access invalid restaurant
+Redirected to http://localhost:3000/reviews?notice=Invalid+restaurant
+Completed 302 Found in 17972ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/reviews?notice=Invalid+restaurant" for 127.0.0.1 at 2017-09-25 10:26:32 +0300
+Processing by ReviewsController#index as HTML
+  Parameters: {"notice"=>"Invalid restaurant"}
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.1ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE Restaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered reviews/index.html.erb within layouts/application (114.2ms)
+Completed 200 OK in 173ms (Views: 164.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2017-09-25 10:28:22 +0300
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (10.9ms)
+  Rendered reviews/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 111ms (Views: 84.1ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 10:28:34 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b8GurCuW+xWVp9KZuTuhg2wmny1JfWS6SmK2QXgxKXnGUTYo+R4mPKfOVAbBIdHnhTIhGXKH/Guy14LfcSMl2Q==", "review"=>{"user_name"=>"Avigail", "remark"=>"I was hungry at the end", "rating"=>"4", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (13.6ms)
+  Rendered reviews/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 3519ms (Views: 87.5ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 10:28:43 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KNuH5U0DUYeFR9nxqre36VQjxoNJgYrq+dkgKTeldZZJdxddrWgomewY5ixi+rLUvg0rHDNl6Fm8E2kAZ+cTqw==", "review"=>{"user_name"=>"Avigail", "remark"=>"I was hungry at the end", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (11.7ms)
+  Rendered reviews/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 3339ms (Views: 81.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 10:28:57 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+/cV2UHZeGhCpcYXn+BANfysoq6yg5Ml5HRiR0Yn94WaW4VhobIBdiv6+cpXrUUIFoJPMchn8ZahvituFmWRuA==", "review"=>{"user_name"=>"Avigail", "remark"=>"I was hungry at the end", "rating"=>"3", "restaurant_id"=>"20"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (15.0ms)
+  Rendered reviews/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 3871ms (Views: 100.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/reviews" for 127.0.0.1 at 2017-09-25 10:29:06 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WNuk+HhlcJHlJ3FeDWxXcSjoGkgTQFfVe/CazD9I/UA5dzRAmA4Jj4x4ToPFIVJMwsb312mkNWY+OtPlbwqbfQ==", "review"=>{"user_name"=>"Avigail", "remark"=>"I was hungry at the end", "rating"=>"3", "restaurant_id"=>"8"}, "commit"=>"Create Review"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "reviews" ("user_name", "remark", "rating", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_name", "Avigail"], ["remark", "I was hungry at the end"], ["rating", 3], ["restaurant_id", 8], ["created_at", "2017-09-25 07:29:09.260664"], ["updated_at", "2017-09-25 07:29:09.260664"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/reviews/20
+Completed 302 Found in 3958ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/reviews/20" for 127.0.0.1 at 2017-09-25 10:29:10 +0300
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering reviews/show.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered reviews/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 101ms (Views: 92.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-09-25 10:29:21 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 114ms (Views: 109.1ms | ActiveRecord: 0.4ms)
+
+

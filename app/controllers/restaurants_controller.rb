@@ -1,6 +1,5 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
-  rescue_from ActiveRecord::RecordNotFound, with: :invalid_restaurant
 
   # GET /restaurants
   # GET /restaurants.json
@@ -71,11 +70,7 @@ class RestaurantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurant_params
-      params.require(:restaurant).permit(:restaurant_name, :cuisine, :rating, :address)
+      params.require(:restaurant).permit(:restaurant_name, :cuisine, :rating, :address, :is_ten_bis)
     end
 
-    def invalid_restaurant
-      logger.error "Attempt to access invalid restaurant"
-      redirect_to restaurant_url, notice: 'Invalid restaurant'
-    end
 end
