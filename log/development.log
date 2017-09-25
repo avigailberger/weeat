@@ -3340,3 +3340,155 @@ Processing by RestaurantsController#index as HTML
 Completed 200 OK in 114ms (Views: 109.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-25 13:03:18 +0300
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (33.7ms)
+  Rendered restaurants/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 3102ms (Views: 3060.5ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-25 13:13:20 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v7yjY6Kw0I/JDCBWNpHsoFjbrN5tYNxAT1tCwJRSdVjeEDPbQtupkaBTH4v+3OmdsvVBQReEvvMKkQvpxBATZQ==", "restaurant"=>{"restaurant_name"=>"", "cuisine"=>"K", "is_ten_bis"=>"1", "address"=>"אבן גבירול 30, תל אביב יפו"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (8.7ms)
+  Rendered restaurants/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 90969ms (Views: 102.3ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-25 13:15:13 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mmLJrTa6m63XxelPvK9FEfhfSKhSYNWCXtp3i2mbAz77zlkV1tHis76a1pJ04kAsEnGlNyiEtzEbED6iOdllAw==", "restaurant"=>{"restaurant_name"=>"", "cuisine"=>"K", "is_ten_bis"=>"1", "address"=>"אבן גבירול 30, תל אביב יפו"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (12.0ms)
+  Rendered restaurants/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 36843ms (Views: 94.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-25 13:16:31 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rxFWPhptAKC+8lYQwvex9GY1GNqm3fSL6TkglMbU8GjOvcaG+gZ5vtetac0KurTJjBv1Rdw5ljis82m9lpaWVQ==", "restaurant"=>{"restaurant_name"=>"", "cuisine"=>"K", "is_ten_bis"=>"1", "address"=>"אבן גבירול 30, תל אביב יפו"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (33.2ms)
+  Rendered restaurants/new.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 177403ms (Views: 122.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-25 14:43:40 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AnzqPvkohy7gTWxH24IyawLB+BM3vfkBaO+GSYrCjMFj0HqGGUP+MIkSU5oTzzdW6O8VjE1Zm7ItJc9g2oDq/A==", "restaurant"=>{"restaurant_name"=>"", "cuisine"=>"K", "is_ten_bis"=>"1", "address"=>"אבן גבירול 30, תל אביב יפו"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (12.9ms)
+  Rendered restaurants/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 58414ms (Views: 98.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-25 14:45:07 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y553lpgSiJ9bHzic4+VG4+URd5ZFBe5oYFEv/Zp7dd6qMucueHnxgTJAB0ErqEPeDz+aCT/hjNslm2bUyjkT4w==", "restaurant"=>{"restaurant_name"=>"", "cuisine"=>"", "is_ten_bis"=>"1", "address"=>""}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (15.7ms)
+  Rendered restaurants/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 15461ms (Views: 97.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-25 14:48:42 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dvtLDrZ5ywuanMRXm52XRieg9ksGWDPbUGGDsq9DXLYXV9u2VhKyFfPD+4pT0JJ7zY4b1Hy8UWgVq8qb/wE6iw==", "restaurant"=>{"restaurant_name"=>"דלי פליישמן שרונה מרקט", "cuisine"=>"K", "is_ten_bis"=>"1", "address"=>"אינשטיין 5, רחובות"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("restaurant_name", "cuisine", "rating", "address", "created_at", "updated_at", "is_ten_bis") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["restaurant_name", "דלי פליישמן שרונה מרקט"], ["cuisine", "K"], ["rating", 0], ["address", "אינשטיין 5, רחובות"], ["created_at", "2017-09-25 11:48:47.561928"], ["updated_at", "2017-09-25 11:48:47.561928"], ["is_ten_bis", "t"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/9
+Completed 302 Found in 46494ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/restaurants/9" for 127.0.0.1 at 2017-09-25 14:49:28 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 100ms (Views: 79.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-25 14:49:28 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:68:in `set_restaurant'
+Started GET "/restaurants/" for 127.0.0.1 at 2017-09-25 14:49:37 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 97ms (Views: 92.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/restaurants/9" for 127.0.0.1 at 2017-09-25 14:49:42 +0300
+Processing by RestaurantsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jM7Ipjnep3MPv3HfyFUCIciDvnenqsxz60+Z1hYVJYntYlge2bXebWbgTgIAGAccIq1T6N1OrsCuhdD/RldDtA==", "id"=>"9"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 9]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "restaurants" WHERE "restaurants"."id" = $1[0m  [["id", 9]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants
+Completed 302 Found in 60ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-09-25 14:49:42 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 97ms (Views: 93.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-25 14:49:44 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (13.7ms)
+  Rendered restaurants/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 99ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-25 14:49:46 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"68zKZpE+aw5Md/fCd+qtTYjM/Nm2EimqqiQP26Rt4Nfifzz0pTsksmGVpQvHnL2+cg0CaLW0FGLddq1mfQlwog==", "restaurant"=>{"restaurant_name"=>"", "cuisine"=>"", "is_ten_bis"=>"0", "address"=>""}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (23.5ms)
+  Rendered restaurants/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 27269ms (Views: 126.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-25 15:19:24 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TywQ0ax6bJ1Gpx6ORXUBGGzFoFsce6ekp9JFEYzPkowugIBpTBEVgy/4IVONOAQlhutNxGafxRfiGAw43I30sQ==", "restaurant"=>{"restaurant_name"=>"", "cuisine"=>"", "is_ten_bis"=>"0", "address"=>""}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (17.2ms)
+  Rendered restaurants/new.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 194210ms (Views: 107.2ms | ActiveRecord: 0.7ms)
+
+
