@@ -3492,3 +3492,339 @@ Processing by RestaurantsController#create as HTML
 Completed 200 OK in 194210ms (Views: 107.2ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/restaurants" for 127.0.0.1 at 2017-09-26 13:37:47 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 1185ms (Views: 1160.4ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/restaurants" for 127.0.0.1 at 2017-09-26 13:44:58 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 959ms (Views: 942.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-26 13:45:08 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (15.6ms)
+  Rendered restaurants/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-26 13:46:02 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LlsDwUvTkIazmHzwfR20BreuMNID6heHNeGD7kNAczpP95N5q7jpmNrHQy21ULE7XYDdTXkOdTRwK8rHEwIVBw==", "restaurant"=>{"restaurant_name"=>"דלי פליישמן שרונה מרקט", "cuisine"=>"K", "is_ten_bis"=>"1", "address"=>"TEST"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "restaurants" ("restaurant_name", "cuisine", "rating", "address", "created_at", "updated_at", "is_ten_bis") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["restaurant_name", "דלי פליישמן שרונה מרקט"], ["cuisine", "K"], ["rating", 0], ["address", "TEST"], ["created_at", "2017-09-26 10:46:02.173857"], ["updated_at", "2017-09-26 10:46:02.173857"], ["is_ten_bis", "t"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/79
+Completed 302 Found in 20ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/restaurants/79" for 127.0.0.1 at 2017-09-26 13:46:02 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"79"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 79], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 17.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-26 13:46:02 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:68:in `set_restaurant'
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-26 13:46:11 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:68:in `set_restaurant'
+Started GET "/restaurants" for 127.0.0.1 at 2017-09-26 13:46:59 +0300
+Processing by RestaurantsController#index as HTML
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  Rendered restaurants/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-26 13:47:00 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (2.8ms)
+  Rendered restaurants/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-26 13:47:02 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sPZRqkz0sMNEy7vab4kXT3uE+eRVWJVeIjirKxkjMx65Rac4ePH/f2kp6RPf/we8gUUHVVb+qJZVagmWwEejaw==", "restaurant"=>{"restaurant_name"=>"", "cuisine"=>"", "is_ten_bis"=>"0", "address"=>""}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (4.1ms)
+  Rendered restaurants/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 28ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-26 15:01:28 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (63.1ms)
+  Rendered restaurants/new.html.erb within layouts/application (67.9ms)
+Completed 200 OK in 21596ms (Views: 3446.3ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-26 15:09:57 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rzm1Thsw0QaV+ntshaNdyCUT4TwDsgZj09EUKN6/NGbOlSX2+1uoGPylRLFN7lj1zz0Mo3lWZNCWG10Bjv1SWw==", "restaurant"=>{"restaurant_name"=>"דלי פליישמן שרונה מרקט", "cuisine"=>"K", "is_ten_bis"=>"1", "address"=>"TEST"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("restaurant_name", "cuisine", "rating", "address", "created_at", "updated_at", "is_ten_bis") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["restaurant_name", "דלי פליישמן שרונה מרקט"], ["cuisine", "K"], ["rating", 0], ["address", "TEST"], ["created_at", "2017-09-26 12:10:06.252541"], ["updated_at", "2017-09-26 12:10:06.252541"], ["is_ten_bis", "t"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/84
+Completed 302 Found in 88385ms (ActiveRecord: 11.9ms)
+
+
+Started GET "/restaurants/84" for 127.0.0.1 at 2017-09-26 15:11:53 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mRestaurant Load (8.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 138ms (Views: 100.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-26 15:11:53 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:68:in `set_restaurant'
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-26 15:12:02 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (17.0ms)
+  Rendered restaurants/new.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 117ms (Views: 113.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-26 15:12:11 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xn3563qzg2HYV4wq1krgLhssE2yjNDOZPOqQR3AY+RE/0WlTmtj6f7EIs/ceB+UT8QL+89nQUSp5INluIFqfLA==", "restaurant"=>{"restaurant_name"=>"דלי פליישמן שרונה מרקט", "cuisine"=>"K", "is_ten_bis"=>"0", "address"=>""}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (11.6ms)
+  Rendered restaurants/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 44523ms (Views: 109.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-26 15:14:30 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"loO7XBqzJqUJye4V+C9A8RLFSx+beKYCK+diGFRIxn73Lyvk+thfu2CW0cgwYkXM+OumgOGcxLFuLSsxBAqgQw==", "restaurant"=>{"restaurant_name"=>"דלי פליישמן שרונה מרקט", "cuisine"=>"K", "is_ten_bis"=>"0", "address"=>""}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (19.4ms)
+  Rendered restaurants/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 76182ms (Views: 136.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-26 15:15:54 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OQ9A8+9ZhUV0L6bFJ2wKGbEciYet2A+++FAzKVxTEy5Yo9BLDzL8Wx1wmRjvIQ8kWzJkGNc8bQ29mnoADBF1Ew==", "restaurant"=>{"restaurant_name"=>"דלי פליישמן שרונה מרקט", "cuisine"=>"K", "is_ten_bis"=>"0", "address"=>"TEST"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("restaurant_name", "cuisine", "rating", "address", "created_at", "updated_at", "is_ten_bis") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["restaurant_name", "דלי פליישמן שרונה מרקט"], ["cuisine", "K"], ["rating", 0], ["address", "TEST"], ["created_at", "2017-09-26 12:15:58.644787"], ["updated_at", "2017-09-26 12:15:58.644787"], ["is_ten_bis", "f"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/85
+Completed 302 Found in 10385ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/restaurants/85" for 127.0.0.1 at 2017-09-26 15:16:04 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"85"}
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 85], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 119ms (Views: 103.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-26 15:16:04 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:68:in `set_restaurant'
+Started GET "/restaurant/new" for 127.0.0.1 at 2017-09-26 15:16:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.1) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.2) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/restaurant/new" for 127.0.0.1 at 2017-09-26 15:16:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/restaurant/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.1) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.2) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-26 15:16:47 +0300
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (14.2ms)
+  Rendered restaurants/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 107ms (Views: 103.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-26 15:17:00 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+PHdim7J+9/JbwglvRBf5+18150HKPQcidapVmwOVr+ZXU0yjqKCwaAwN/h1XVraB1I6An3Mlq/MHOB/PEwwgg==", "restaurant"=>{"restaurant_name"=>"דלי פליישמן שרונה מרקט", "cuisine"=>"K", "is_ten_bis"=>"1", "address"=>"TEST"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "restaurants" ("restaurant_name", "cuisine", "address", "created_at", "updated_at", "is_ten_bis") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["restaurant_name", "דלי פליישמן שרונה מרקט"], ["cuisine", "K"], ["address", "TEST"], ["created_at", "2017-09-26 12:18:35.426005"], ["updated_at", "2017-09-26 12:18:35.426005"], ["is_ten_bis", "t"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/86
+Completed 302 Found in 141594ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/restaurants/86" for 127.0.0.1 at 2017-09-26 15:19:22 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 89ms (Views: 81.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-26 15:19:22 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:68:in `set_restaurant'
+Started GET "/restaurants/new" for 127.0.0.1 at 2017-09-26 15:34:17 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#new as HTML
+  Rendering restaurants/new.html.erb within layouts/application
+  Rendered restaurants/_form.html.erb (56.8ms)
+  Rendered restaurants/new.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 3336ms (Views: 3283.0ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2017-09-26 15:34:58 +0300
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/lcC2yMK9Vd2PLc6UianC60Z7Q3HGgPTB9/vYS0j9Xef+5Jjw2GMSR9jiOeaa6I2RzcAkr3+YWBCFaZIfWGTSg==", "restaurant"=>{"restaurant_name"=>"מאמא מיה", "cuisine"=>"K", "is_ten_bis"=>"1", "address"=>"תל אביב"}, "commit"=>"Create Restaurant"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("restaurant_name", "cuisine", "rating", "address", "created_at", "updated_at", "is_ten_bis") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["restaurant_name", "מאמא מיה"], ["cuisine", "K"], ["rating", 0], ["address", "תל אביב"], ["created_at", "2017-09-26 12:35:03.245915"], ["updated_at", "2017-09-26 12:35:03.245915"], ["is_ten_bis", "t"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/88
+Completed 302 Found in 37136ms (ActiveRecord: 16.6ms)
+
+
+Started GET "/restaurants/88" for 127.0.0.1 at 2017-09-26 15:35:35 +0300
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"88"}
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  Rendering restaurants/show.html.erb within layouts/application
+  Rendered restaurants/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 111ms (Views: 88.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/restaurants/stylesheet.css" for 127.0.0.1 at 2017-09-26 15:35:35 +0300
+Processing by RestaurantsController#show as CSS
+  Parameters: {"id"=>"stylesheet"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=stylesheet):
+  
+app/controllers/restaurants_controller.rb:68:in `set_restaurant'
