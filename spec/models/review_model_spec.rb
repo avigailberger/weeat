@@ -19,7 +19,8 @@ RSpec.describe Review , type: :model do
 
     context 'add a review' do
       it 'restaurant should have a rating of 3' do
-        review1 = Review.create!(user_name: 'Moshe', rating:3, restaurant_id: restaurant_id)
+        #review1 = Review.create!(user_name: 'Moshe', rating:3, restaurant_id: restaurant_id)
+        review1 =   FactoryGirl.create(:review, restaurant_id: restaurant_id, rating:3)
         restaurant.update_rating
         expect(restaurant.rating).to eq(3)
       end
@@ -27,9 +28,9 @@ RSpec.describe Review , type: :model do
 
     context 'add 3 reviews' do
       it 'restaurant should have a rating of 1' do
-        review1 = Review.create!(user_name: 'Moshe', rating:3, restaurant_id: restaurant_id)
-        review2 = Review.create!(user_name: 'Moshe', rating:0, restaurant_id: restaurant_id)
-        review3 = Review.create!(user_name: 'Moshe', rating:1, restaurant_id: restaurant_id)
+        review1 =   FactoryGirl.create(:review, restaurant_id: restaurant_id)
+        review2 =   FactoryGirl.create(:review, restaurant_id: restaurant_id, rating:3)
+        review3 =   FactoryGirl.create(:review, restaurant_id: restaurant_id, rating:1)
         restaurant.update_rating
         expect(restaurant.reviews.size).to eq(3)
         expect(restaurant.rating).to eq(1)
