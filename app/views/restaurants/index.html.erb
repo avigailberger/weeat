@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!--&lt;!&ndash;<p id="notice"><%= notice %></p>
 
 <h1>Restaurants</h1>
 
@@ -31,4 +31,16 @@
 </table>
 <br>
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+<%= link_to 'New Restaurant', new_restaurant_path %>&ndash;&gt;-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WeEat</title>
+  <%= javascript_pack_tag 'restaurants_react' %>
+</head>
+
+<body>
+<%= yield %>
+</body>
+</html>
