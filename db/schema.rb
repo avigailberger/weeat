@@ -16,19 +16,18 @@ ActiveRecord::Schema.define(version: 20170924070851) do
   enable_extension "plpgsql"
 
   create_table "restaurants", force: :cascade do |t|
-    t.string "restaurant_name"
-    t.string "cuisine"
-    t.integer "rating"
-    t.string "address"
+    t.string "restaurant_name", null: false
+    t.string "cuisine", null: false
+    t.string "address", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "is_ten_bis"
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string "user_name"
+    t.string "user_name", null: false
     t.string "remark"
-    t.integer "rating"
+    t.integer "rating", null: false
     t.bigint "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

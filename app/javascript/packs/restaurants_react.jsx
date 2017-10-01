@@ -7,32 +7,15 @@ class HomePage extends React.Component {
     render() {
         return (
             <div className="banner">
-                <h1><span className="cuisines">F&ensp;</span>WeEat</h1>
-                <h2>it's 12:00 and you're hungry</h2>
+                <div style={{marginLeft: "70%", paddingTop: "10px"}}>
+                    <h1 className="cuisine">F&ensp;</h1>
+                    <h2>WeEat</h2>
+                    <h3>it's 12:00 and you're hungry</h3>
+                </div>
             </div>
         );
     }
 }
-
-/*class RestaurantList extends React.Component {
-    constructor() {
-        super();
-        this.state = {}
-
-
-
-        var request = new XMLHttpRequest();
-        request.open('get', '/restaurants.json', true);
-        request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-        request.send(data);
-
-
-    render() {
-        return(
-            <h3>{this.state.data[0].id}</h3>
-        );
-    }
-};*/
 
 class RestaurantList extends React.Component {
     constructor(){
@@ -46,10 +29,21 @@ class RestaurantList extends React.Component {
     }
     render(){
         let items = this.state.items
+        //error handling
         return (
             <div>
-                {items.map(item =>
-                    <h4 key={item.id}>{item.restaurant_name}</h4>)}
+                <table id="restauranTable">
+                    <tbody>
+                    {items.map(item =>
+                        <tr key={item.id}>
+                            <td className="cuisine" >{item.cuisine}</td>
+                            <td className="restaurant">{item.restaurant_name}</td>
+                            <td className="restaurant">{item.average_rating}</td>
+                            <td className="restaurant">{item.address}</td>
+                        </tr>
+                    )}
+                    </tbody>
+                </table>
             </div>
         )
     }

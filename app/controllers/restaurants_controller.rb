@@ -1,12 +1,13 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
+  @_default_serializer = RestaurantSerializer
+
   # GET /restaurants
   # GET /restaurants.json
   def index
     @restaurants = Restaurant.all
   end
-
 
   # GET /restaurants/1
   # GET /restaurants/1.json
@@ -26,7 +27,6 @@ class RestaurantsController < ApplicationController
   # POST /restaurants.json
   def create
     @restaurant = Restaurant.new(restaurant_params)
-    @restaurant.rating = 0
 
     respond_to do |format|
       if @restaurant.save

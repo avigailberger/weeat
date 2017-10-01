@@ -25,13 +25,14 @@ class ReviewsController < ApplicationController
   # POST /reviews
   # POST /reviews.json
   def create
-    @review = Review.new(review_params)
     begin
-      @review.save!
+      @review = Review.create!(review_params)
       @restaurant = @review.restaurant
       if @restaurant.nil?
         invalid_restaurant
+        return
       end
+
       @restaurant.update_rating
       respond_to do |format|
         format.html { redirect_to @review, notice: 'Review was successfully created.' }

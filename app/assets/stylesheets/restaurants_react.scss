@@ -2,17 +2,42 @@
   position: relative;
   min-height: 50px;
   background: #9c9;
-  padding: 10px 10px 10px 550px;
   border-bottom: 2px solid;
-  font-size: 30px;
-  font-family:"Times New Roman";
-  color: White;
-  text-align: center;
   background-image: image-url("banner.jpg");
   background-size: cover;
+  color: White;
 }
-.cuisines
+.banner h1, .banner h2, .banner h3
 {
+  font-size: 30px;
+  font-family:"Times New Roman";
+  text-align: center;
+}
+.banner .cuisine
+ {
   font-family:"EF Cuisines";
   font-size: 60px;
+  text-align: center;
+ }
+
+td.restaurant
+{
+  font-size: 15px;
+  font-family:"Times New Roman";
+  color: rgb(204,102,0);
+  text-align: right;
+}
+td.cuisine
+{
+  font-family:"EF Cuisines";
+  font-size: 25px;
+  color: rgb(204,102,0);
+  text-align:right;
+}
+
+table#restauranTable {
+  margin-right:10px;
+  width:400px;
+  border: 1px solid rgb(204,102,0);
+  direction: rtl;
 }
