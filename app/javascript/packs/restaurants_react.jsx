@@ -29,25 +29,49 @@ class RestaurantList extends React.Component {
     }
     render(){
         let items = this.state.items
-        //error handling
+        if (items && items.length > 0) {
+            return (
+                <div>
+                    <table id="restauranTable">
+                        <tbody>
+                        {items.map(item =>
+                            <tr key={item.id}>
+                                <td className="cuisine">{item.cuisine}</td>
+                                <td className="restaurant">{item.restaurant_name}</td>
+                                <RestaurantRating average_rating={item.average_rating} />
+                                <td className="restaurant">{item.address}</td>
+                            </tr>
+                        )}
+                        </tbody>
+                    </table>
+                </div>
+            )
+        }
+        else {//error handling
+            return (
+                <span>No restaurants found</span>
+            )
+        }
+    }
+}
+
+class RestaurantRating extends React.Component {
+    render() {
+        var stars = [];
+        for(var i=0;i<this.props.average_rating;i++){
+            stars.push(
+                (<td className="restaurant" key={i}>★</td>)
+            );
+        }
+
         return (
-            <div>
-                <table id="restauranTable">
-                    <tbody>
-                    {items.map(item =>
-                        <tr key={item.id}>
-                            <td className="cuisine" >{item.cuisine}</td>
-                            <td className="restaurant">{item.restaurant_name}</td>
-                            <td className="restaurant">{item.average_rating}</td>
-                            <td className="restaurant">{item.address}</td>
-                        </tr>
-                    )}
-                    </tbody>
-                </table>
-            </div>
+            <span>
+                {stars}
+            </span>
         )
     }
 }
+
 
 
 document.addEventListener('DOMContentLoaded', () => {

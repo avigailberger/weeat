@@ -11,7 +11,8 @@ RSpec.describe RestaurantsController , type: :controller do
       expect(response.status).to eq(302)
 
       restaurant = Restaurant.find_by_restaurant_name('מאמא מיה')
-      expect(restaurant.rating).to eq(0) # if th post didn't work - this will be nil
+      expect(restaurant.rating).to eq(0) # if the post didn't work - this will be nil
+
     end
   end
 end

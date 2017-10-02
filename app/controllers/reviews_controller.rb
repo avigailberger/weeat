@@ -26,23 +26,26 @@ class ReviewsController < ApplicationController
   # POST /reviews.json
   def create
     begin
-      @review = Review.create!(review_params)
+      @review = Review.new(review_params)
       @restaurant = @review.restaurant
       if @restaurant.nil?
-        invalid_restaurant
+        error_saving('Error in saving Review: invalid restaurant id: ' + @review.restaurant_id.to_s)
         return
       end
-
-      @restaurant.update_rating
-      respond_to do |format|
-        format.html { redirect_to @review, notice: 'Review was successfully created.' }
-        format.json { render :show, status: :created, location: @review }
-      end
-    rescue => e
-      respond_to do |format|
-        format.html { render :new }
-        format.json { render json: @review.errors, status: :unprocessable_entity }
+      if @review.save
+        respond_to do |format|
+          format.html { redirect_to @review, notice: 'Review was successfully created.' }
+          format.json { render :show, status: :created, location: @review }
         end
+      else
+        respond_to do |format|
+          format.html { render :new }
+          format.json { render json: @review.errors, status: :unprocessable_entity }
+          end
+      end
+
+    rescue => e
+      error_saving ('Error is saving Review: missing data. exception: ' + e.to_s)
       return
     end
   end
@@ -82,8 +85,12 @@ class ReviewsController < ApplicationController
       params.require(:review).permit(:user_name, :remark, :rating, :restaurant_id)
     end
 
-    def invalid_restaurant
-      logger.error "Attempt to access invalid restaurant"
-      redirect_to action: 'index', notice: 'Invalid restaurant'
+    def error_saving (notice)
+      logger.error notice
+      @reviews = Review.all
+      respond_to do |format|
+        format.html { redirect_to reviews_url, notice: notice }
+        format.json { head :no_content }
+      end
     end
 end

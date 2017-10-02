@@ -11,18 +11,25 @@ RSpec.describe Review , type: :model do
 
     context 'add a review' do
       it 'restaurant should have a rating of 3' do
-        review1 =   FactoryGirl.create(:review, restaurant_id: restaurant_id, rating: 3)
+        review1 =   FactoryGirl.create(:review, restaurant: restaurant, rating: 3)
         expect(restaurant.average_rating).to eq(3)
       end
     end
 
     context 'add 3 reviews' do
       it 'restaurant should have a rating of 1' do
-        review1 =   FactoryGirl.create(:review, restaurant_id: restaurant_id)
-        review2 =   FactoryGirl.create(:review, restaurant_id: restaurant_id, rating: 3)
-        review3 =   FactoryGirl.create(:review, restaurant_id: restaurant_id, rating: 1)
+        review1 =   FactoryGirl.create(:review, restaurant: restaurant)
+        review2 =   FactoryGirl.create(:review, restaurant: restaurant, rating: 3)
+        review3 =   FactoryGirl.create(:review, restaurant: restaurant, rating: 1)
         expect(restaurant.reviews.size).to eq(3)
         expect(restaurant.average_rating).to eq(1)
+      end
+    end
+
+    context 'add a review with association' do
+      it 'restaurant should have a rating of 3' do
+        review1 =   FactoryGirl.create(:review, restaurant: FactoryGirl.create(:restaurant), rating: 3)
+        expect(review1.restaurant.average_rating).to eq(3)
       end
     end
 
