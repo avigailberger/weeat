@@ -27,6 +27,7 @@ class RestaurantsController < ApplicationController
   # POST /restaurants.json
   def create
     @restaurant = Restaurant.new(restaurant_params)
+    @restaurant.set_cuisince_code(@restaurant.cuisine_name)
 
     respond_to do |format|
       if @restaurant.save
@@ -71,7 +72,7 @@ class RestaurantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurant_params
-      params.require(:restaurant).permit(:restaurant_name, :cuisine, :rating, :address, :is_ten_bis)
+      params.require(:restaurant).permit(:restaurant_name, :cuisine, :rating, :address, :is_ten_bis, :cuisine_name)
     end
 
 end
