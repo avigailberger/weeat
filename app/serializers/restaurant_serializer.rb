@@ -2,11 +2,11 @@ class RestaurantSerializer < ActiveModel::Serializer
 
   attributes :id,
              :restaurant_name,
-             :cuisine,
              :cuisine_name,
              :address,
              :is_ten_bis,
-             :average_rating
+             :cuisine_code,
+             :average_rating,
 
 
   def scheme
@@ -15,5 +15,9 @@ class RestaurantSerializer < ActiveModel::Serializer
 
   def average_rating
     Restaurant.average_rating
+  end
+
+  def cuisine_code
+    Restaurant.cuisine_code
   end
 end

@@ -170,7 +170,7 @@ class RestaurantList extends React.Component {
                                         {this.renderStars(item.average_rating)}  {item.restaurant_name}<br/>
                                         {item.address}
                                         </div>
-                                        <div className="cuisine">{item.cuisine}</div>
+                                        <div className="cuisine">{item.cuisine_code}</div>
                                     </div>
                                 )}
                             </div>

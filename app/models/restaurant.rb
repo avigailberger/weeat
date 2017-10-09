@@ -11,9 +11,9 @@ class Restaurant < ApplicationRecord
     end
   end
 
-  def set_cuisince_code (cuisineName)
+  def cuisine_code
     cuisineCode = 'F'
-    case cuisineName
+    case self.cuisine_name
       when 'Asian'
         cuisineCode = 'D'
       when 'Burger'
@@ -43,7 +43,7 @@ class Restaurant < ApplicationRecord
       when 'Vegan'
         cuisineCode =  'H'
     end
-    self.cuisine = cuisineCode
+    cuisineCode
   end
 
 end

@@ -18,7 +18,6 @@ CSV.foreach("tmp/Restaurants-ALL.csv", :headers => true) do |row|
   #creating the restaurant
   params = {cuisine_name: cuisine_name, is_ten_bis: is_ten_bis, address: address, restaurant_name:restaurant_name}
   restaurant = Restaurant.new(params)
-  restaurant.set_cuisince_code(restaurant.cuisine_name)
   restaurant.save
 
   #check if has been created
