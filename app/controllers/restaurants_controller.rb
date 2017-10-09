@@ -9,6 +9,14 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
+  # GET /cuisines
+  def cuisines
+    restaurants = Restaurant.all.uniq { |r| r.cuisine_name }.map { |r| r.cuisine_name }
+    respond_to do |format|
+      format.json { render :json => { cuisines: restaurants }, :status => 200 }
+      end
+  end
+
   # GET /restaurants/1
   # GET /restaurants/1.json
   def show
