@@ -144,6 +144,7 @@ class RestaurantList extends React.Component {
 
 
     render(){
+        //get filtered items
         let items = this.state.items;
         const selectCuisineValue = this.props.selectCuisineValue;
         const selectRatingValue = this.props.selectRatingValue;
@@ -154,6 +155,8 @@ class RestaurantList extends React.Component {
             items = items.filter(function(m) { return m.average_rating == selectRatingValue;});
         if (searchName != '')
             items = items.filter(function(m) { return m.restaurant_name == searchName;});
+
+        //generate table of restaurants
         if (items && items.length > 0) {
             return (
                 <div>
