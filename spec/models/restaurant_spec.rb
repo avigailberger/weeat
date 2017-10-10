@@ -10,7 +10,7 @@ RSpec.describe Restaurant , type: :model do
   context 'creating restaurant with no params' do
     it 'should raise 5 errors' do
       restaurant = Restaurant.create
-      expect(restaurant.errors.size).to eq(5)
+      expect(restaurant.errors.size).to eq(4)
     end
   end
 
@@ -21,6 +21,7 @@ RSpec.describe Restaurant , type: :model do
         expect(restaurant.errors.size).to eq(0)
         expect(restaurant.id).to be > 0
         expect(restaurant.average_rating).to eq(0)
+        expect(restaurant.cuisine_code).to eq('K')
       end
     end
   end

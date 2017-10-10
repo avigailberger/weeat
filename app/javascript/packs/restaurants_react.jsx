@@ -2,16 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-
-class Banner extends React.Component {
+class AddReview extends React.Component {
     render() {
         return (
-            <div className="banner">
-                <div style={{marginLeft: "50%", paddingTop: "10px"}}>
-                    <h1 className="cuisine">F&ensp;</h1>
-                    <h2>WeEat</h2>
-                    <h3>it's 12:00 and you're hungry</h3>
-                </div>
+            <div className="addReview" >
+                <form action="/reviews/new">
+                    <input type="submit" value="Add Review" />
+                </form>
+            </div>
+        );
+    }
+}
+class AddRestaurant extends React.Component {
+    render() {
+        return (
+            <div className="addRestaurant" >
+                <form action="/restaurants/new">
+                    <input type="submit" value="Add Restaurant" />
+                </form>
             </div>
         );
     }
@@ -113,6 +121,10 @@ class RestaurantContainer extends React.Component {
                     <RatingSelectionBox handleOnChange={this.handleOnChangeRating.bind(this)}/>
                     <SearchName handleOnChange={this.handleOnChangeSearchName.bind(this)}/>
                 </div>
+                <div className="buttons">
+                    <AddReview />
+                    <AddRestaurant />
+                </div>
                 <RestaurantList selectRatingValue={selectRatingValue} selectCuisineValue={selectCuisineValue} searchName={searchName}/>
             </div>
         )
@@ -170,12 +182,12 @@ class RestaurantList extends React.Component {
                                         {this.renderStars(item.average_rating)}  {item.restaurant_name}<br/>
                                         {item.address}
                                         </div>
-                                        <div className="cuisine">{item.cuisine_cod}</div>
+                                        <div className="cuisine">{item.cuisine_code}</div>
                                     </div>
                                 )}
                             </div>
                         </div>
-                </div>
+                    </div>
                 </div>
             )
         }
@@ -191,7 +203,6 @@ class RestaurantList extends React.Component {
 document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(
         <div>
-            <Banner />
             <RestaurantContainer />
         </div >,
         document.body.appendChild(document.createElement('div')),

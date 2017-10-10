@@ -21,6 +21,7 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1/edit
   def edit
+    @restaurants = Restaurant.all
   end
 
   # POST /reviews

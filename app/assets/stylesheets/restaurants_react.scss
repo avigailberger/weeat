@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  min-height: 50px;
+  height: 200px;
   border: 1px solid #ccc;
   background-image: image-url("banner.jpg");
   background-size: cover;
@@ -72,15 +72,9 @@ div.map
   margin-bottom: 25px;
 }
 
-.restaurants
-{
-  background-color: #f7e4d7;
-}
-
 .filters {
   position: relative;
   height: 50px;
-  //border: 1px solid #ccc;
   display: flex;
   justify-content: Center;
 }
@@ -123,4 +117,33 @@ div.map
   border-radius: 5px;
   padding-right: 10px;
 }
+
+.addReview input,.addRestaurant input
+{
+  margin: 5px 5px 5px 5px;
+  font-family:"Times New Roman";
+  font-size: 15px;
+  text-align: right;
+  direction: rtl;
+  height: 40px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(166, 166, 166);
+  border-image: initial;
+  border-radius: 5px;
+  padding-right: 10px;
+  background-color: white;
+}
+
+.buttons
+{
+  display: flex;
+  justify-content: center;
+}
+
+body
+{
+  background-color: #f7e4d7;
+}
+
 

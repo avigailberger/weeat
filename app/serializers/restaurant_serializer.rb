@@ -19,7 +19,7 @@ class RestaurantSerializer < ActiveModel::Serializer
   end
 
   def cuisine_code
-    object.cuisine_cod
+    object.cuisine_code
   end
 end
 =end

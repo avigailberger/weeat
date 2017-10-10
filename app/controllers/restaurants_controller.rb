@@ -30,6 +30,7 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants/1/edit
   def edit
+    @cuisines = Restaurant.all.uniq { |r| r.cuisine_name }.map { |r| r.cuisine_name}
   end
 
   # POST /restaurants
