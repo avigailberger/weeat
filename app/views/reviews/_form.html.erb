@@ -27,8 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :restaurant_id %>
-    <%= form.text_field :restaurant_id, id: :review_restaurant_id %>
+    <%= form.label :restaurant_name %>
+    <%= form.collection_select :restaurant_id, @restaurants, :id, :restaurant_name, include_blank: true %>
   </div>
 
   <div class="actions">

@@ -17,15 +17,11 @@
 !/log/.keep
 !/tmp/.keep
 
+/node_modules
 /node_modules/*
-*/node_modules/*
 /yarn-error.log
 
 .byebug_history
 /public/packs
 /public/packs-test
-
-# added by me :)
-*.idea
-*.idea/*
-*.cache
+/node_modules

@@ -1,10 +1,20 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
+  @_default_serializer = RestaurantSerializer
+
   # GET /restaurants
   # GET /restaurants.json
   def index
     @restaurants = Restaurant.all
+  end
+
+  # GET /cuisines
+  def cuisines
+    restaurants = Restaurant.all.uniq { |r| r.cuisine_name }.map { |r| r.cuisine_name }
+    respond_to do |format|
+      format.json { render :json => { cuisines: restaurants }, :status => 200 }
+      end
   end
 
   # GET /restaurants/1
@@ -25,7 +35,7 @@ class RestaurantsController < ApplicationController
   # POST /restaurants.json
   def create
     @restaurant = Restaurant.new(restaurant_params)
-    @restaurant.rating = 0
+    @restaurant.set_cuisince_code(@restaurant.cuisine_name)
 
     respond_to do |format|
       if @restaurant.save
@@ -70,7 +80,7 @@ class RestaurantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurant_params
-      params.require(:restaurant).permit(:restaurant_name, :cuisine, :rating, :address, :is_ten_bis)
+      params.require(:restaurant).permit(:restaurant_name, :cuisine, :rating, :address, :is_ten_bis, :cuisine_name)
     end
 
 end

@@ -1,0 +1,126 @@
+.banner {
+  position: relative;
+  min-height: 50px;
+  border: 1px solid #ccc;
+  background-image: image-url("banner.jpg");
+  background-size: cover;
+  color: White;
+}
+.banner h1, .banner h2, .banner h3
+{
+  font-size: 30px;
+  font-family:"Times New Roman";
+  text-align: center;
+}
+.banner .cuisine
+ {
+  font-family:"EF Cuisines";
+  font-size: 60px;
+  text-align: center;
+ }
+
+div.restaurantList {
+  flex: 0 0 auto;
+  scrolling: yes;
+ }
+div.restaurantItem {
+  background-color: rgba(255,255,255,0.8);
+  border: 1px solid #ccc;
+  display: flex;
+  hight: 40px;
+  width: 300px;
+}
+
+div.restaurant
+{
+  font-family:"Times New Roman";
+  font-size: 15px;
+  text-align: right;
+  color: #555555;
+  flex: 1;
+  margin: 5px 5px 5px 5px;
+}
+
+div.cuisine
+{
+  font-family:"EF Cuisines";
+  font-size: 45px;
+  text-align: center;
+  color: #65322f;
+  flex: 0 0 20%;
+  margin: 5px 5px 5px 5px;
+  height: 40px;
+  line-height: 40px;
+}
+div.restaurantBody {
+  display: flex;
+}
+
+div.map
+{
+  flex: 1 0 50%;
+  background-image: image-url("map.jpg");
+}
+
+.scrollbar
+{
+  margin-left: 30px;
+  float: right;
+  height: 500px;
+  background: #f7e4d7;
+  overflow-y: scroll;
+  margin-bottom: 25px;
+}
+
+.restaurants
+{
+  background-color: #f7e4d7;
+}
+
+.filters {
+  position: relative;
+  height: 50px;
+  //border: 1px solid #ccc;
+  display: flex;
+  justify-content: Center;
+}
+
+.filterRating
+{
+  margin: 5px 5px 5px 5px;
+}
+.filterRating select
+{
+  font-size: 15px;
+  height: 40px;
+  font-family:"Times New Roman";
+}
+
+.filterCuisine
+{
+  margin: 5px 5px 5px 5px;
+}
+.filterCuisine select
+{
+  font-family:"Times New Roman";
+  font-size: 15px;
+  text-align: left;
+  height: 40px;
+}
+
+.searchName input
+{
+  margin: 5px 5px 5px 5px;
+  font-family:"Times New Roman";
+  font-size: 15px;
+  text-align: right;
+  direction: rtl;
+  height: 36px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(166, 166, 166);
+  border-image: initial;
+  border-radius: 5px;
+  padding-right: 10px;
+}
+
