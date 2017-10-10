@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
-  @_default_serializer = RestaurantSerializer
+  #@default_serializer = RestaurantSerializer
 
   # GET /restaurants
   # GET /restaurants.json

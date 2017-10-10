@@ -1,3 +1,4 @@
+=begin
 class RestaurantSerializer < ActiveModel::Serializer
 
   attributes :id,
@@ -14,10 +15,11 @@ class RestaurantSerializer < ActiveModel::Serializer
   end
 
   def average_rating
-    Restaurant.average_rating
+    object.average_rating
   end
 
   def cuisine_code
-    Restaurant.cuisine_code
+    object.cuisine_cod
   end
 end
+=end
