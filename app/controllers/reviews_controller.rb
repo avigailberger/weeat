@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
   #rescue_from ActiveRecord::RecordNotFound, with: :invalid_restaurant
+  helper_method :params
 
   # GET /reviews
   # GET /reviews.json
@@ -17,6 +18,9 @@ class ReviewsController < ApplicationController
   def new
     @review = Review.new
     @restaurants = Restaurant.all
+    @restaurantId = params['restaurantId']
+    puts(@remark)
+    return
   end
 
   # GET /reviews/1/edit

@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :remark %>
-    <%= form.text_field :remark, id: :review_remark %>
+    <%= form.text_field :remark, id: :review_remark%>
   </div>
 
   <div class="field">
@@ -28,7 +28,11 @@
 
   <div class="field">
     <%= form.label :restaurant_name %>
-    <%= form.collection_select :restaurant_id, @restaurants, :id, :restaurant_name, include_blank: true %>
+    <% if @restaurantId.nil? %>
+      <%= form.collection_select :restaurant_id, @restaurants, :id, :restaurant_name, include_blank: true%>
+    <% else %>
+      <%= form.collection_select :restaurant_id, @restaurants, :id, :restaurant_name, :selected => @restaurantId%>
+    <% end %>
   </div>
 
   <div class="actions">

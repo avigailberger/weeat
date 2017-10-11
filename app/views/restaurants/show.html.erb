@@ -23,4 +23,5 @@
 </p>
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
+<%= link_to 'Back', restaurants_path %> |
+<%= link_to 'Add a Review to this restaurant', new_review_path(:restaurantId => @restaurant.id) %>
