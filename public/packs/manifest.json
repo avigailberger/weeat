@@ -1,5 +1,9 @@
 {
-  "application.js": "/packs/application-de5392835bbab0e1da84.js",
-  "hello_react.js": "/packs/hello_react-e0ba4c08b53b50d76d4d.js",
-  "restaurants_react.js": "/packs/restaurants_react-8899899e746b5cdfdaed.js"
+  "add.js": "/packs/add-f8f83626c3befbe7a3b3.js",
+  "application.js": "/packs/application-2e0d1536a90cc8fe74f4.js",
+  "filters.js": "/packs/filters-3db206a8c8b791517335.js",
+  "hello_react.js": "/packs/hello_react-d35a7ebfabafea4deae9.js",
+  "map.js": "/packs/map-a476e5c956a478f41590.js",
+  "restaurant_list.js": "/packs/restaurant_list-91a83ad16e5e06376478.js",
+  "restaurants_home.js": "/packs/restaurants_home-8cf145649690884d5bf0.js"
 }
