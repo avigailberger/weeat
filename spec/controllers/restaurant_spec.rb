@@ -8,9 +8,9 @@ RSpec.describe RestaurantsController , type: :controller do
 
     context 'through the controller' do
       it 'should have a rating of 0 and not nil, and cuisine code Z' do
-        params = {cuisine: cuisine, is_ten_bis: true, address: 'תל אביב', restaurant_name:'מאמא מיה'}
+        params = {cuisine_id: cuisine.id, is_ten_bis: true, address: 'תל אביב', restaurant_name:'מאמא מיה'}
         post :create, params: {restaurant: params}
-        expect(response.status).to eq(200)
+        expect(response.status).to eq(302)
 
         restaurant = Restaurant.find_by_restaurant_name('מאמא מיה')
         expect(restaurant.average_rating).to eq(0) # if the post didn't work - this will be nil
