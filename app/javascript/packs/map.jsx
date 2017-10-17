@@ -1,5 +1,6 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
+import Marker from 'google-map-react';
 
 export class SimpleMap extends React.Component {
     constructor(){
@@ -11,8 +12,7 @@ export class SimpleMap extends React.Component {
         zoom: 15
     };
 
-    renderMarkers(map) {
-        debugger
+    renderMarkers(map){
         if (this.props.filteredRestaurants != null)
         {
             const geocoder = new window.google.maps.Geocoder();
@@ -35,8 +35,7 @@ export class SimpleMap extends React.Component {
             <GoogleMapReact
                 onGoogleApiLoaded={({map, maps}) => this.renderMarkers(map)}
                 defaultCenter={this.props.center}
-                defaultZoom={this.props.zoom}
-            >
+                defaultZoom={this.props.zoom}>
             </GoogleMapReact>
         );
     }
