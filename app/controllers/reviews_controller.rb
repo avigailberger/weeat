@@ -18,9 +18,8 @@ class ReviewsController < ApplicationController
   def new
     @review = Review.new
     @restaurants = Restaurant.all
+    @notice = params['notice']
     @restaurantId = params['restaurantId']
-    puts(@remark)
-    return
   end
 
   # GET /reviews/1/edit
@@ -44,14 +43,12 @@ class ReviewsController < ApplicationController
           format.json { render :show, status: :created, location: @review }
         end
       else
-        respond_to do |format|
-          format.html { render :new }
-          format.json { render json: @review.errors, status: :unprocessable_entity }
-          end
+        error_saving('Error in saving Review: invalid params')
+        return
       end
 
     rescue => e
-      error_saving ('Error is saving Review: missing data. exception: ' + e.to_s)
+      error_saving ('Error in saving Review: missing data. exception: ' + e.to_s)
       return
     end
   end
@@ -64,6 +61,7 @@ class ReviewsController < ApplicationController
         format.html { redirect_to @review, notice: 'Review was successfully updated.' }
         format.json { render :show, status: :ok, location: @review }
       else
+        @restaurants = Restaurant.all
         format.html { render :edit }
         format.json { render json: @review.errors, status: :unprocessable_entity }
       end
@@ -95,7 +93,7 @@ class ReviewsController < ApplicationController
       logger.error notice
       @reviews = Review.all
       respond_to do |format|
-        format.html { redirect_to reviews_url, notice: notice }
+        format.html { redirect_to action: :new, notice: notice }
         format.json { head :no_content }
       end
     end

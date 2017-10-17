@@ -9,14 +9,6 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
-  # GET /cuisines
-  def cuisines
-    cuisines = Restaurant.all.uniq { |r| r.cuisine_name }.map { |r| r.cuisine_name }
-    respond_to do |format|
-      format.json { render :json => { cuisines: cuisines }, :status => 200 }
-      end
-  end
-
   # GET /restaurants/1
   # GET /restaurants/1.json
   def show
@@ -25,28 +17,37 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/new
   def new
     @restaurant = Restaurant.new
-    @cuisines = Restaurant.all.uniq { |r| r.cuisine_name }.map { |r| r.cuisine_name}
+    @notice = params['notice']
+    @cuisines = Cuisine.all
   end
 
   # GET /restaurants/1/edit
   def edit
-    @cuisines = Restaurant.all.uniq { |r| r.cuisine_name }.map { |r| r.cuisine_name}
+    @cuisines = Cuisine.all
   end
 
   # POST /restaurants
   # POST /restaurants.json
   def create
-    @restaurant = Restaurant.new(restaurant_params)
-    #@restaurant.set_cuisince_code(@restaurant.cuisine_name)
-
-    respond_to do |format|
-      if @restaurant.save
-        format.html { redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
-        format.json { render :show, status: :created, location: @restaurant }
-      else
-        format.html { render :new }
-        format.json { render json: @restaurant.errors, status: :unprocessable_entity }
+    begin
+      @restaurant = Restaurant.new(restaurant_params)
+      @cuisine = @restaurant.cuisine
+      if @cuisine.nil?
+        error_saving('Error in saving Restaurant: invalid cuisine')
+        return
       end
+      respond_to do |format|
+        if @restaurant.save
+          format.html { redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
+          format.json { render :show, status: :created, location: @restaurant }
+        else
+          error_saving('Error in saving Restaurant: invalid params')
+          return
+        end
+      end
+    rescue => e
+      error_saving ('Error in saving Restaurant: missing data. exception: ' + e.to_s)
+      return
     end
   end
 
@@ -58,7 +59,8 @@ class RestaurantsController < ApplicationController
         format.html { redirect_to @restaurant, notice: 'Restaurant was successfully updated.' }
         format.json { render :show, status: :ok, location: @restaurant }
       else
-        format.html { render :edit }
+        @cuisines = Cuisine.all
+        format.html { render :edit}
         format.json { render json: @restaurant.errors, status: :unprocessable_entity }
       end
     end
@@ -82,7 +84,16 @@ class RestaurantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurant_params
-      params.require(:restaurant).permit(:restaurant_name, :address, :is_ten_bis, :cuisine_name)
+      params.require(:restaurant).permit(:restaurant_name, :address, :is_ten_bis, :cuisine_id)
     end
+
+  def error_saving (notice)
+    logger.error notice
+    @cuisines = Cuisine.all
+    respond_to do |format|
+      format.html { redirect_to action: :new, notice: notice }
+      format.json { head :no_content}
+    end
+  end
 
 end

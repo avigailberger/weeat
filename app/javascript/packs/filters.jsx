@@ -19,9 +19,9 @@ export class CuisineSelectionBox extends React.Component {
     }
 
     componentWillMount(){
-        fetch( 'http://localhost:3000/cuisines' )
+        fetch( 'http://localhost:3000/cuisines.json' )
             .then( response => response.json() )
-            .then( data => this.setState({cuisines: data.cuisines}))
+            .then( response => this.setState({cuisines: response}))
     }
 
     render() {
@@ -29,9 +29,9 @@ export class CuisineSelectionBox extends React.Component {
         return (
             <div className="filterCuisine">
                 <select onChange={this.props.handleOnChange}>
-                    <option key='All' value="All">Choose Cuisine</option>
+                    <option key='All' value="All">סוג מטבח</option>
                     {cuisines.map(item =>
-                        <option key={item}>{item}</option>)
+                        <option key={item.id}>{item.descriptionH}</option>)
                     }
                 </select>
             </div>
@@ -44,7 +44,7 @@ export class RatingSelectionBox extends React.Component {
         return (
             <div className="filterRating">
                 <select onChange={this.props.handleOnChange}>
-                    <option value="All">Choose Rating</option>
+                    <option value="All">דירוג</option>
                     <option value="1">★</option>
                     <option value="2">★★</option>
                     <option value="3">★★★</option>

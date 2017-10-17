@@ -1,6 +1,7 @@
 class Restaurant < ApplicationRecord
   has_many :reviews, dependent: :destroy
-  validates_presence_of :restaurant_name, :address, :cuisine_name
+  belongs_to :cuisine
+  validates_presence_of :restaurant_name, :address, :cuisine_id
   validates :is_ten_bis, inclusion: [ true, false ]
 
   def average_rating
@@ -9,41 +10,6 @@ class Restaurant < ApplicationRecord
     else
       avgRating = (self.reviews.average(:rating)).round
     end
-  end
-
-  def cuisine_code
-    cuisineCode = 'F'
-    case self.cuisine_name
-      when 'Asian'
-        cuisineCode = 'D'
-      when 'Burger'
-        cuisineCode =  'A'
-      when 'Coffee'
-        cuisineCode =  'B'
-      when 'Fish'
-        cuisineCode =  'K'
-      when 'Home Food'
-        cuisineCode =  'f'
-      when 'Hummus'
-        cuisineCode =  'n'
-      when 'Indian'
-        cuisineCode =  '6'
-      when 'Italian'
-        cuisineCode =  'L'
-      when 'Meat'
-        cuisineCode =  '3'
-      when 'Mexican'
-        cuisineCode =  '8'
-      when 'Pizza'
-        cuisineCode =  'L'
-      when 'Salad/Sandwich'
-        cuisineCode =  'q'
-      when 'Sushi'
-        cuisineCode =  'I'
-      when 'Vegan'
-        cuisineCode =  'H'
-    end
-    cuisineCode
   end
 
 end

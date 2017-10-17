@@ -6,7 +6,8 @@ require_relative '../../app/controllers/reviews_controller'
 RSpec.describe Review , type: :model do
 
   context 'create a restaurant' do
-    let!(:restaurant) {FactoryGirl.create(:restaurant)}
+    let!(:cuisine) {FactoryGirl.create(:cuisine)}
+    let!(:restaurant) {FactoryGirl.create(:restaurant, cuisine: cuisine)}
     let!(:restaurant_id) {restaurant.id}
 
     context 'add a review' do

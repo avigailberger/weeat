@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cuisines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description English</th>
+      <th>Description Hebrew</th>
+      <th>Icon</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cuisines.each do |cuisine| %>
+      <tr>
+        <td><%= cuisine.descriptionE %></td>
+        <td><%= cuisine.descriptionH %></td>
+        <td><%= cuisine.icon %></td>
+        <td><%= link_to 'Show', cuisine %></td>
+        <td><%= link_to 'Edit', edit_cuisine_path(cuisine) %></td>
+        <td><%= link_to 'Destroy', cuisine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cuisine', new_cuisine_path %>
+<%= link_to 'Back to Restaurants', restaurants_path %>

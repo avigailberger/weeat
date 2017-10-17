@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-
-  get 'cuisines', to: 'restaurants#cuisines'
+  resources :cuisines
   resources :reviews
   resources :restaurants
   get 'test/hello'

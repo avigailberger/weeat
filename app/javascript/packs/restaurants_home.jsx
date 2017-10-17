@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {RestaurantList} from './restaurant_list.jsx';
 import {SearchName, CuisineSelectionBox, RatingSelectionBox} from './filters.jsx';
-import {AddReview, AddRestaurant} from './add.jsx';
+import {AddReview, AddRestaurant, AddCuisine} from './add.jsx';
 
 class RestaurantContainer extends React.Component {
     constructor() {
@@ -48,6 +48,7 @@ class RestaurantContainer extends React.Component {
                 <div className="buttons">
                     <AddReview />
                     <AddRestaurant />
+                    <AddCuisine />
                 </div>
                 <RestaurantList selectRatingValue={selectRatingValue} selectCuisineValue={selectCuisineValue} searchName={searchName}/>
             </div>

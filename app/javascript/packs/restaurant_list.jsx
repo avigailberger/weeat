@@ -29,13 +29,13 @@ export class RestaurantList extends React.Component {
         let items = this.state.items;
         const selectCuisineValue = this.props.selectCuisineValue;
         const selectRatingValue = this.props.selectRatingValue;
-        const searchName = this.props.searchName;
+        const searchName = this.props.searchName.trim();
         if (selectCuisineValue != 'All')
-            items = items.filter(function(m) { return m.cuisine_name == selectCuisineValue;});
+            items = items.filter(function(m) { return m.cuisine.descriptionE == selectCuisineValue;});
         if (selectRatingValue != 'All')
             items = items.filter(function(m) { return m.average_rating == selectRatingValue;});
         if (searchName != '')
-            items = items.filter(function(m) { return m.restaurant_name == searchName;});
+            items = items.filter(function(m) { return m.restaurant_name.trim().includes(searchName);});
 
         //generate table of restaurants
         if (items && items.length > 0) {
@@ -51,10 +51,11 @@ export class RestaurantList extends React.Component {
                                     <div className="restaurantItem" key={item.id}>
                                         <div className="restaurant">
                                             {this.renderStars(item.average_rating)}  {item.restaurant_name}<br/>
+                                            {item.cuisine.descriptionH}<br/>
                                             {item.address}
                                         </div>
                                         <div className="cuisine">
-                                            <a href={'/restaurants/'+ item.id}> {item.cuisine_code}</a>
+                                            <a href={'/restaurants/'+ item.id}> {item.cuisine.icon}</a>
                                         </div>
                                     </div>
                                 )}

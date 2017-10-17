@@ -88,6 +88,8 @@ div.map
   font-size: 15px;
   height: 40px;
   font-family:"Times New Roman";
+  text-align: right;
+  direction: rtl;
 }
 
 .filterCuisine
@@ -98,7 +100,8 @@ div.map
 {
   font-family:"Times New Roman";
   font-size: 15px;
-  text-align: left;
+  text-align: right;
+  direction: rtl;
   height: 40px;
 }
 
@@ -118,7 +121,7 @@ div.map
   padding-right: 10px;
 }
 
-.addReview input,.addRestaurant input
+.addReview input,.addRestaurant input,.addCuisine input
 {
   margin: 5px 5px 5px 5px;
   font-family:"Times New Roman";
