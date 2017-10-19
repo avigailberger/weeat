@@ -1,5 +1,5 @@
 import React from 'react';
-import {SimpleMap} from './map.jsx';
+import {SimpleMap} from './maps2.jsx';
 
 export class RestaurantList extends React.Component {
     constructor(){
@@ -31,7 +31,7 @@ export class RestaurantList extends React.Component {
         const selectRatingValue = this.props.selectRatingValue;
         const searchName = this.props.searchName.trim();
         if (selectCuisineValue != 'All')
-            items = items.filter(function(m) { return m.cuisine.descriptionE == selectCuisineValue;});
+            items = items.filter(function(m) { return m.cuisine.descriptionH == selectCuisineValue;});
         if (selectRatingValue != 'All')
             items = items.filter(function(m) { return m.average_rating == selectRatingValue;});
         if (searchName != '')

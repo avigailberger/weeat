@@ -7,7 +7,9 @@
     "google-map-react": "^0.24.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-google-maps": "^9.0.1",
+    "react-native-geocoding": "^0.2.0"
   },
   "devDependencies": {
     "babel-preset-stage-0": "^6.24.1",

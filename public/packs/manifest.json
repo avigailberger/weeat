@@ -1,9 +1,10 @@
 {
-  "add.js": "/packs/add-febb507b2c0c96402d17.js",
-  "application.js": "/packs/application-2e0d1536a90cc8fe74f4.js",
-  "filters.js": "/packs/filters-800255fc5270fbadedfc.js",
-  "hello_react.js": "/packs/hello_react-02e76fa6ca43ca454413.js",
-  "map.js": "/packs/map-33893314a28c7753e510.js",
-  "restaurant_list.js": "/packs/restaurant_list-c4b273ab810b30ffd35d.js",
-  "restaurants_home.js": "/packs/restaurants_home-d21a8c2e15fb6a1bb77c.js"
+  "add.js": "/packs/add-5e4d6d86dce49771081c.js",
+  "application.js": "/packs/application-f4e0511751cee9513e00.js",
+  "filters.js": "/packs/filters-8621f8d732c1618ea6e0.js",
+  "hello_react.js": "/packs/hello_react-25f5bc9e2ddf65a95488.js",
+  "map.js": "/packs/map-5f32fc5f43c97854333b.js",
+  "maps2.js": "/packs/maps2-ecb6c0a1c5bfc049214c.js",
+  "restaurant_list.js": "/packs/restaurant_list-1ea46c286f16b7b9f636.js",
+  "restaurants_home.js": "/packs/restaurants_home-23439a79df467cd00a78.js"
 }

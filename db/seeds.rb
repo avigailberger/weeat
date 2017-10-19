@@ -120,7 +120,7 @@ puts "finished creating #{cuisineCounter} cuisines"
 =end
 
 
-#Restaurant.delete_all
+Restaurant.delete_all
 restaurantCounter = 0
 rowCounter = 0
 CSV.foreach("tmp/Restaurants-ALL.csv", :headers => true) do |row|
@@ -134,13 +134,15 @@ CSV.foreach("tmp/Restaurants-ALL.csv", :headers => true) do |row|
   if row[4] != 'checked'
    is_ten_bis = false
   end
+  lat = row[6]
+  lng = row[5]
 
   #creating the restaurant
   cuisine = Cuisine.find_by_descriptionE(cuisine_name)
   if cuisine.nil?
     puts 'error non existent cuisine, cannot create restaurant'
   else
-    params = {cuisine: cuisine, is_ten_bis: is_ten_bis, address: address, restaurant_name:restaurant_name}
+    params = {cuisine: cuisine, is_ten_bis: is_ten_bis, address: address, restaurant_name: restaurant_name, lat: lat, lng: lng}
     restaurant = Restaurant.new(params)
     restaurant.save
 
