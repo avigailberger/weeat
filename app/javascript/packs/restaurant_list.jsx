@@ -1,5 +1,5 @@
 import React from 'react';
-import {SimpleMap} from './maps2.jsx';
+import {SimpleMap} from './maps.jsx';
 
 export class RestaurantList extends React.Component {
     constructor(){
